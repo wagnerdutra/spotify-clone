@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import GlobalStyle from './styles/global';
+import Sidebar from './components/Sidebar';
+import Player from './components/Player';
+import Header from './components/Header';
+import { Wrapper, Container, Content } from './styles/components';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+import Routes from './routes';
+
+/* Browser router passa como props, informações da URL, por
+isso muito importante usa-lo para englobar toda aplicação */
+
+const App = () => (
+  <BrowserRouter>
+    <Wrapper>
+      <GlobalStyle />
+      <Container>
+        <Sidebar />
+        <Content>
+          <Header />
+          <Routes />
+        </Content>
+      </Container>
+      <Player />
+    </Wrapper>
+  </BrowserRouter>
+);
 
 export default App;
