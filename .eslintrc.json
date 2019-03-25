@@ -22,6 +22,8 @@
       "error",
       { "extensions": [".js", ".jsx"] }
     ],
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "no-underscore-dangle": 0,
+    "react/destructuring-assignment": 0
   }
 }
