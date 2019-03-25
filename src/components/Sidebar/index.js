@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -10,7 +10,7 @@ import AddPlaylistIcon from '../../assets/images/add_playlist.svg';
 
 import Loading from '../Loading';
 
-class Sidebar extends Component {
+class Sidebar extends PureComponent {
   static propTypes = {
     playlists: PropTypes.shape({
       data: PropTypes.arrayOf(

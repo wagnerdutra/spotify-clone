@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Search, User } from './styles';
 
-const Header = () => (
+const Header = React.memo(() => (
   <Container>
     <Search>
       <input placeholder="Search" />
@@ -16,6 +16,6 @@ const Header = () => (
       Wagner Dutra
     </User>
   </Container>
-);
+));
 
 export default Header;
